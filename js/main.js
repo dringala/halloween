@@ -11,6 +11,7 @@ $(document).ready(function(){
         width: maxWidth,
         height: maxHeight
     });
+    alert('hi');
 });
 
  $( window ).resize(function() {
