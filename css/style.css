@@ -80,7 +80,10 @@ h1 {
   z-index: -21;
 
 }
-
+.timeline {
+  height: 4000px;
+  width: 100%;
+}
 
 .buttons {
   width: 300px;
@@ -96,4 +99,90 @@ h1 {
 }
 .buttons:hover {
   color:#f00;
+}
+
+.scroll {
+  width: 130px;
+  height: 116px;
+  position: fixed;
+  margin-left: -65px;
+  left: 50%;
+  z-index: 10;
+  opacity: 1;
+  -webkit-animation: scroll-bounce 1.5s linear 1.5s infinite alternate;
+    animation: scroll-bounce 1.5s linear 1.5s infinite alternate;
+}
+
+@-webkit-keyframes scroll-bounce {
+    0%   {bottom:40px;}
+    50%  {bottom:30px;}
+    100% {bottom:40px;}
+}
+@-moz-keyframes scroll-bounce {
+    0%   {bottom:40px;}
+    50%  {bottom:30px;}
+    100% {bottom:40px;}
+}
+@keyframes scroll-bounce {
+    0%   {bottom:40px;}
+    50%  {bottom:30px;}
+    100% {bottom:40px;}
+}
+
+.leftorright {
+  width: 538px;
+  height: 231px;
+  margin: -100px 0 0 -269px;
+  left: 50%;
+  top: 50%;
+  position: fixed;
+  z-index: 10;
+}
+.choose { 
+  width: 282px;
+  height: 103px;
+  left: 128px;
+  top: 0;
+  position: absolute;
+  background: url(../images/choose.png) no-repeat;
+}
+.left {
+  width: 150px;
+  height: 58px;
+  left: 0px;
+  top: 146px;
+  position: absolute;
+  background: url(../images/left.png) no-repeat;
+}
+.left:hover {
+  background-position: -150px 0;
+}
+.or {
+  width: 88px;
+  height: 95px;
+  left: 215px;
+  top: 136px;
+  position: absolute;
+  background: url(../images/or.png) no-repeat;
+}
+.right {
+  width: 182px;
+  height: 58px;
+  right: 0px;
+  top: 146px;
+  position: absolute;
+  background: url(../images/right.png) no-repeat;
+}
+.right:hover {
+  background-position: -182px 0;
+}
+
+.demo {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
