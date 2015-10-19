@@ -25,6 +25,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
   line-height: 1;
+
 }
 ol, ul {
   list-style: none;
@@ -37,10 +38,12 @@ q:before, q:after {
   content: '';
   content: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
 *,:before,:after {
 -moz-box-sizing:border-box;
 -webkit-box-sizing:border-box;
@@ -138,7 +141,7 @@ h1 {
   position: fixed;
   z-index: 10;
 }
-.choose { 
+.choose {
   width: 282px;
   height: 103px;
   left: 128px;
@@ -185,4 +188,8 @@ h1 {
   position: fixed;
   background-size: cover;
   background-repeat: no-repeat;
+    -webkit-backface-visibility: hidden;
+-moz-backface-visibility:    hidden;
+-ms-backface-visibility:     hidden;
+-webkit-transform:translate3d(0,0,0);
 }
