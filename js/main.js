@@ -7,7 +7,7 @@ var maxWidth = $(window).width();
 var maxHeight = $(window).height();
 
 $(document).ready(function(){
-    $('.demo').css({
+    $('.demo, .test').css({
         width: maxWidth,
         height: maxHeight
     });
@@ -24,6 +24,7 @@ $(document).ready(function(){
        }
        else {
         $('.test').hide();
+        $('.test')[0].load();
        }
     });
 
@@ -32,7 +33,7 @@ $(document).ready(function(){
  $( window ).resize(function() {
     var maxWidth = $(window).width();
     var maxHeight = $(window).height();
- $('.demo').css({
+ $('.demo, .test').css({
         width: maxWidth,
         height: maxHeight
 });
