@@ -83,7 +83,15 @@ h1 {
   z-index: -21;
 
 }
-.timeline {
+.timeline-1 {
+  height: 3000px;
+  width: 100%;
+}
+.timeline-2 {
+  height: 1500px;
+  width: 100%;
+}
+.timeline-3 {
   height: 4000px;
   width: 100%;
 }
