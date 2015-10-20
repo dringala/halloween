@@ -83,7 +83,6 @@ h1 {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: -9999;
 }
 .timeline-1 {
   height: 3000px;
@@ -122,6 +121,7 @@ h1 {
   left: 50%;
   z-index: 10;
   opacity: 1;
+  bottom: 5%;
   -webkit-animation: scroll-bounce 1.5s linear 1.5s infinite alternate;
     animation: scroll-bounce 1.5s linear 1.5s infinite alternate;
 }
