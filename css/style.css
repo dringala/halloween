@@ -125,6 +125,30 @@ h1 {
   -webkit-animation: scroll-bounce 1.5s linear 1.5s infinite alternate;
     animation: scroll-bounce 1.5s linear 1.5s infinite alternate;
 }
+#section-one-continue {
+  width: 402px;
+  height: 109px;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  z-index: 9999;
+  background: url("../images/continue.png");
+}
+#section-one-continue:hover {
+  background-position: -402px 0;
+}
+#intro-continue {
+  width: 402px;
+  height: 109px;
+  margin: auto;
+  position: absolute;
+  left: 0; bottom: 10%; right: 0;
+  z-index: 9999;
+  background: url("../images/continue.png");
+}
+#intro-continue:hover {
+  background-position: -402px 0;
+}
 
 @-webkit-keyframes scroll-bounce {
     0%   {bottom:40px;}
@@ -198,8 +222,8 @@ h1 {
   position: fixed;
   background-size: cover;
   background-repeat: no-repeat;
-    -webkit-backface-visibility: hidden;
--moz-backface-visibility:    hidden;
--ms-backface-visibility:     hidden;
--webkit-transform:translate3d(0,0,0);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility:    hidden;
+  -ms-backface-visibility:     hidden;
+  -webkit-transform:translate3d(0,0,0);
 }

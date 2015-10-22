@@ -7,11 +7,12 @@ var maxWidth = $(window).width();
 var maxHeight = $(window).height();
 
 $(document).ready(function(){
-    $('.demo, .test').css({
+    $('.demo, .test, #section-one-left, #intro-video').css({
         width: maxWidth,
         height: maxHeight
     });
-   $('.test').hide();
+    $('.animsition').animsition();
+    $('.test').hide();
 
     $(window).scroll(function() {
        if($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
@@ -28,13 +29,19 @@ $(document).ready(function(){
        }
     });
 
+    $("#section-one-continue").hide();
+    $("#section-one-continue").delay(18000).fadeIn("slow");
+    $("#intro-continue").hide();
+    $("#intro-video").bind("ended", function() {
+        $("#intro-continue").fadeIn("slow");
+    });
 });
 
  $( window ).resize(function() {
     var maxWidth = $(window).width();
     var maxHeight = $(window).height();
- $('.demo, .test').css({
-        width: maxWidth,
-        height: maxHeight
-});
+     $('.demo, .test').css({
+            width: maxWidth,
+            height: maxHeight
+    });
 });

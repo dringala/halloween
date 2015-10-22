@@ -1,67 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-      <meta charset="UTF-8">
-      <title>Document</title>
-      <script src="https://cdn.jsdelivr.net/jquery/3.0.0-alpha1/jquery.js"></script>
-      <script src="https://cdn.jsdelivr.net/skrollr/0.6.30/skrollr.min.js"></script>
-
-      <link rel="stylesheet" type="text/css" href="css/style.css">
-</head>
-<body>
-
-      <audio controls loop autoplay>
-        <source src="sound/soundscape-1.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-      </audio>
-
-      <div class="timeline-2">
-            <div class="lol" data-00="opacity: 0"  data-600="opacity: 1" data-800="opacity: 0"><a href="http://www.google.co.uk">Hello</a></div>
-      </div>
-
-      <div class="scroll" data-00="opacity: 1" data-100p="opacity: 0.1" data-500p="opacity: 0.1" data-560p="opacity: 0"><img src="images/scroll.png"></div>
-
-      <div class="leftorright" data-00="opacity: 0" data-270p="opacity: 0" data-290p="opacity: 1">
-            <a href="section-3.html"><div class="choose"></div></a>
-            <div class="left"></div>
-            <div class="or"></div>
-            <div class="right"></div>
-      </div>
-
-      <div class="demo"
-      data-0p="background-image:!url(images/2-01.jpg);"
-      data-10p="background-image:!url(images/2-02.jpg);"
-      data-20p="background-image:!url(images/2-03.jpg);"
-      data-30p="background-image:!url(images/2-04.jpg);"
-      data-40p="background-image:!url(images/2-05.jpg);"
-      data-50p="background-image:!url(images/2-06.jpg);"
-      data-60p="background-image:!url(images/2-07.jpg);"
-      data-70p="background-image:!url(images/2-08.jpg);"
-      data-80p="background-image:!url(images/2-09.jpg);"
-      data-90p="background-image:!url(images/2-10.jpg);"
-      data-100p="background-image:!url(images/2-11.jpg);"
-      data-110p="background-image:!url(images/2-12.jpg);"
-      data-120p="background-image:!url(images/2-13.jpg);"
-      data-130p="background-image:!url(images/2-14.jpg);"
-      data-140p="background-image:!url(images/2-15.jpg);"
-      data-150p="background-image:!url(images/2-16.jpg);"
-      data-160p="background-image:!url(images/2-17.jpg);"
-      data-170p="background-image:!url(images/2-18.jpg);"
-      data-180p="background-image:!url(images/2-19.jpg);"
-      data-190p="background-image:!url(images/2-20.jpg);"
-      data-200p="background-image:!url(images/2-21.jpg);"
-      data-210p="background-image:!url(images/2-22.jpg);"
-      data-220p="background-image:!url(images/2-23.jpg);"
-      data-230p="background-image:!url(images/2-24.jpg);"
-      data-240p="background-image:!url(images/2-25.jpg);"
-      data-250p="background-image:!url(images/2-26.jpg);"
-      data-260p="background-image:!url(images/2-27.jpg);"
-      data-270p="background-image:!url(images/2-28.jpg);"
-      data-280p="background-image:!url(images/2-29.jpg);"
-      data-290p="background-image:!url(images/2-30.jpg);"
-      data-300p="background-image:!url(images/2-31.jpg);">
-      </div>
-
-      <script src="js/main.js"></script>
-</body>
+      <head>
+            <meta charset="UTF-8">
+            <title>Document</title>
+            <script src="https://cdn.jsdelivr.net/jquery/3.0.0-alpha1/jquery.js"></script>
+            <script src="https://cdn.jsdelivr.net/skrollr/0.6.30/skrollr.min.js"></script>
+            <link rel="stylesheet" type="text/css" href="css/animsition.min.css">
+            <script src="js/animsition.min.js"></script>            
+            <link rel="stylesheet" type="text/css" href="css/style.css">
+            <script type="text/javascript">
+            var images = new Array()
+                    function preload() {
+                        for (i = 0; i < preload.arguments.length; i++) {
+                            images[i] = new Image()
+                            images[i].src = preload.arguments[i]
+                        }
+                    }
+                    preload(
+                        "images/2-01.jpg",
+                        "images/2-02.jpg",
+                        "images/2-03.jpg",
+                        "images/2-04.jpg",
+                        "images/2-05.jpg",
+                        "images/2-06.jpg",
+                        "images/2-07.jpg",
+                        "images/2-08.jpg",
+                        "images/2-09.jpg",
+                        "images/2-10.jpg",
+                        "images/2-11.jpg",
+                        "images/2-12.jpg",
+                        "images/2-13.jpg",
+                        "images/2-14.jpg",
+                        "images/2-15.jpg",
+                        "images/2-16.jpg",
+                        "images/2-17.jpg",
+                        "images/2-18.jpg",
+                        "images/2-19.jpg",
+                        "images/2-20.jpg",
+                        "images/2-21.jpg",
+                        "images/2-22.jpg",
+                        "images/2-23.jpg",
+                        "images/2-24.jpg",
+                        "images/2-25.jpg",
+                        "images/2-26.jpg",
+                        "images/2-27.jpg",
+                        "images/2-28.jpg",
+                        "images/2-29.jpg",
+                        "images/2-30.jpg",
+                        "images/2-31.jpg"
+)
+      </script>            
+      </head>
+      <body>
+            <audio controls loop autoplay>
+                  <source src="sound/soundscape-1.mp3" type="audio/mpeg">
+                  Your browser does not support the audio element.
+            </audio>
+            <div class="timeline-2">
+                  <div class="lol" data-00="opacity: 0"  data-600="opacity: 1" data-800="opacity: 0">
+                  <a href="http://www.google.co.uk">Hello</a>
+                  </div>
+            </div>
+            <div class="scroll" data-00="opacity: 1" data-100p="opacity: 0.1" data-500p="opacity: 0.1" data-560p="opacity: 0">
+                  <img src="images/scroll.png">
+            </div>
+            <div class="leftorright" data-00="opacity: 0" data-270p="opacity: 0" data-290p="opacity: 1">
+                  <a href="section-3.html"><div class="choose"></div></a>
+                  <div class="left"></div>
+                  <div class="or"></div>
+                  <div class="right"></div>
+            </div>
+            <div class="demo"
+                  data-0p="background-image:!url(images/2-01.jpg);"
+                  data-10p="background-image:!url(images/2-02.jpg);"
+                  data-20p="background-image:!url(images/2-03.jpg);"
+                  data-30p="background-image:!url(images/2-04.jpg);"
+                  data-40p="background-image:!url(images/2-05.jpg);"
+                  data-50p="background-image:!url(images/2-06.jpg);"
+                  data-60p="background-image:!url(images/2-07.jpg);"
+                  data-70p="background-image:!url(images/2-08.jpg);"
+                  data-80p="background-image:!url(images/2-09.jpg);"
+                  data-90p="background-image:!url(images/2-10.jpg);"
+                  data-100p="background-image:!url(images/2-11.jpg);"
+                  data-110p="background-image:!url(images/2-12.jpg);"
+                  data-120p="background-image:!url(images/2-13.jpg);"
+                  data-130p="background-image:!url(images/2-14.jpg);"
+                  data-140p="background-image:!url(images/2-15.jpg);"
+                  data-150p="background-image:!url(images/2-16.jpg);"
+                  data-160p="background-image:!url(images/2-17.jpg);"
+                  data-170p="background-image:!url(images/2-18.jpg);"
+                  data-180p="background-image:!url(images/2-19.jpg);"
+                  data-190p="background-image:!url(images/2-20.jpg);"
+                  data-200p="background-image:!url(images/2-21.jpg);"
+                  data-210p="background-image:!url(images/2-22.jpg);"
+                  data-220p="background-image:!url(images/2-23.jpg);"
+                  data-230p="background-image:!url(images/2-24.jpg);"
+                  data-240p="background-image:!url(images/2-25.jpg);"
+                  data-250p="background-image:!url(images/2-26.jpg);"
+                  data-260p="background-image:!url(images/2-27.jpg);"
+                  data-270p="background-image:!url(images/2-28.jpg);"
+                  data-280p="background-image:!url(images/2-29.jpg);"
+                  data-290p="background-image:!url(images/2-30.jpg);"
+                  data-300p="background-image:!url(images/2-31.jpg);">
+            </div>
+            <script src="js/main.js"></script>
+      </body>
 </html>
