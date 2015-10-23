@@ -189,13 +189,9 @@
                   data-740p="background-image:!url(images/3-75.jpg);">
             </div>
             <div id="text-container">
-                  <div class="writer"><p>The Merchant will find you,
-                  <?php if (isset($_SESSION['firstname']) && !is_null($_SESSION['firstname'])): ?>
-                    
-                    <span class="firstname"><?php echo $_SESSION['firstname'] ?></span><?php
-                  
-                  endif;
-                  ?>.
+                  <div class="writer"><p>The Merchant will find you, <span class="firstname"><?php if (isset($_SESSION['firstname']) && !is_null($_SESSION['firstname'])):
+                      echo $_SESSION['firstname'];
+                  endif; ?></span>.
                   Come out, come out wherever you are...</p></div>
             </div>
             <script src="js/main.js"></script>
