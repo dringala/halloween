@@ -1,12 +1,17 @@
 <?php
     session_start();
     
-    if ($_SERVER['SERVER_NAME'] === 'hosted.uk.dev' || 'halloween.dev') {
+    if ($_SERVER['SERVER_NAME'] === 'hosted.uk.dev') {
         // Local
         $dbhost = 'localhost';
         $dbuser = 'root';
         $dbpass = 'password';
-    } else {
+    } 
+    elseif ($_SERVER['SERVER_NAME'] === 'halloween.dev') {
+        $dbhost = 'localhost';
+        $dbuser = 'root';
+        $dbpass = '';            
+    }   else {
         // Live
         error_reporting(0); // Turn off errors so we can log them
         $dbhost = 'localhost';
