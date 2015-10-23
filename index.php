@@ -1,7 +1,7 @@
 <?php
     session_start();
     
-    if ($_SERVER['SERVER_NAME'] === 'hosted.uk.dev') {
+    if ($_SERVER['SERVER_NAME'] === 'hosted.uk.dev' || 'halloween.dev') {
         // Local
         $dbhost = 'localhost';
         $dbuser = 'root';
