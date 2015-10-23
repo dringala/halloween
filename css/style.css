@@ -89,11 +89,15 @@ h1 {
   width: 100%;
 }
 .timeline-2 {
-  height: 1500px;
+  height: 2000px;
   width: 100%;
 }
 .timeline-3 {
   height: 4000px;
+  width: 100%;
+}
+.timeline-4 {
+  height: 6700px;
   width: 100%;
 }
 
@@ -213,6 +217,52 @@ h1 {
 .right:hover {
   background-position: -182px 0;
 }
+#text-container {
+  position: fixed;
+  height: 46%;
+  width: 42.5%;
+  z-index: 9999;
+  box-sizing: border-box;
+  top: 28%;
+  left: 23.5%;
+  perspective: 1000px;
+}
+
+.writer  {
+  font-family: "Courier New", Courier, monospace;
+  color: green;
+  height: 100%;
+  width: 100%;
+  padding: 10%;
+ font-size: 22px;
+line-height: 1.5;
+-webkit-perspective: 1000px;
+-moz-perspective: 1000px;
+-o-perspective: 1000px;
+-ms-perspective: 1000px;
+perspective: 1000px;
+-webkit-perspective-origin: 10%, 50%;
+-moz-perspective-origin: 10%, 50%;
+-o-perspective-origin: 10%, 50%;
+-ms-perspective-origin: 10%, 50%;
+perspective-origin: 10%, 50%;
+text-shadow: 0px 0px 0px #000000;
+-webkit-transform-origin: 40% 40%;
+-moz-transform-origin: 40% 40%;
+-o-transform-origin: 40% 40%;
+-ms-transform-origin: 40% 40%;
+transform-origin: 38% 88%;
+-webkit-transform-style: preserve-3d;
+-moz-transform-style: preserve-3d;
+-o-transform-style: preserve-3d;
+-ms-transform-style: preserve-3d;
+transform-style: preserve-3d;
+-webkit-transform: perspective(700px) rotateX(-2deg) rotateY(6deg) rotateZ(0deg) scale(1) skew(1deg, -5deg) translate(0px, 0px);
+-moz-transform: perspective(700px) rotateX(0deg) rotateY(15deg) rotateZ(0deg) scale(1) skew(5deg, 0deg) translate(0px, 0px);
+-o-transform: perspective(700px) rotateX(0deg) rotateY(15deg) rotateZ(0deg) scale(1) skew(5deg, 0deg) translate(0px, 0px);
+-ms-transform: perspective(700px) rotateX(0deg) rotateY(15deg) rotateZ(0deg) scale(1) skew(5deg, 0deg) translate(0px, 0px);
+}
+
 
 .demo {
   top: 0;
