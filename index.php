@@ -11,7 +11,12 @@
         $dbhost = 'localhost';
         $dbuser = 'root';
         $dbpass = '';            
-    }   else {
+    } 
+    elseif ($_SERVER['SERVER_NAME'] === 'localhost:8888') {
+        $dbhost = 'localhost';
+        $dbuser = 'root';
+        $dbpass = 'root';            
+    } else {
         // Live
         error_reporting(0); // Turn off errors so we can log them
         $dbhost = 'localhost';
