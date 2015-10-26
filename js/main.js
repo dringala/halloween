@@ -6,13 +6,30 @@ skrollr.init({
 var maxWidth = $(window).width();
 var maxHeight = $(window).height();
 
+// var creditHeight = ($('#credits').height());
+function fun(){
+$('#credits').css('top', '');
+$('#credits').animate({top:"-200%"}, 25000);
+    
+}
+
+function callCredits() {
+    $('.thisdiv').fadeIn("slow", function() {
+        $('#credits').fadeIn("slow");
+        fun();
+    });    
+}
+
 $(document).ready(function() {
-    $('.demo, .test, #section-one-left, #intro-video').css({
+
+    $('.thisdiv').hide();
+    $('.demo, .test, #section-one-left, #intro-video, #section-two-right, .thisdiv').css({
         width: maxWidth,
         height: maxHeight
     });
     $('.animsition').animsition();
     $('.test').hide();
+    // $('.end-video').hide();    
 
     if($('.test').length > 0) {
         $(window).scroll(function() {
@@ -30,50 +47,47 @@ $(document).ready(function() {
         });
     }
 
-    $('.writer').hide();
-
-    if($('.writer').length > 0) {
+    $('#writer').hide();
+    if($('#writer').length > 0) {
         $(window).scroll(function() {
             if (document.documentElement.clientHeight + $(document).scrollTop() >= document.body.offsetHeight) {
-                    disableScroll();
-                    $('.writer').fadeIn();
-                    var $el = $('.writer'),
-                        txt = $el.text(),
-                        txtLen = txt.length,
-                        timeOut,
-                        char = 0;
-
-                    $el.text('|');
-
-                    (function typeIt() {   
-                        var humanize = Math.round(Math.random() * (200 - 30)) + 30;
-                        timeOut = setTimeout(function() {
-                            char++;
-                            var type = txt.substring(0, char);
-                            $el.text(type + '|');
-                            typeIt();
-
-                            if (char == txtLen) {
-                                $el.text($el.text().slice(0, -1)); // remove the '|'
-                                clearTimeout(timeOut);
-                            }
-
-                        }, humanize);
-                    }());
+                disableScroll();
+                $('#computer')[0].play();
+                $('.end-video').css("z-index", "0");
+                    // trigger first video 
+                    // after 7/8 seconds start typing
+                $("#computer").bind("ended", function() {
+                    callCredits();
+                });
             }
             else {
-                  $('.writer').hide();
+                  $('#writer').hide();
+                  $('#computer')[0].load();
             }
         });
 
     }
-    $("#section-one-continue").hide();
-    $("#section-one-continue").delay(18000).fadeIn("slow");
-    $("#intro-continue").hide();
+
+    var clearIn = setInterval(function(){
+        var current = $('#computer').get(0).currentTime;
+            if(current > 6) {
+                typingText();
+                clearInterval(clearIn);
+            } 
+    },1000); 
+
+    $("#section-one-right-continue").hide();
+    $("#section-one-right-continue").delay(22000).fadeIn("slow");
+    $("#section-one-left-continue").hide();
+    $("#section-one-left-continue").delay(18000).fadeIn("slow");  
+    $("#section-two-right-continue").hide();
+    $("#section-two-right-continue").delay(26000).fadeIn("slow");        
+    
+    $("#intro-continue, .thisdiv").hide();
+
     $("#intro-video").bind("ended", function() {
         $("#intro-continue").fadeIn("slow");
     });
-
 
 
 });
@@ -97,4 +111,26 @@ $(window).resize(function() {
     });
 });
 
+
+
+function typingText() {
+     $('#writer').fadeIn();
+
+                (function type() {
+                text = str.slice(0, ++i);
+                if (text === str) {
+              $('#writer').delay(4000).fadeOut();
+                return 
+                };
+                
+                document.getElementById('writer').innerHTML = text;
+
+                var char = text.slice(-1);
+                if( char === '<' ) isTag = true;
+                if( char === '>' ) isTag = false;
+
+                if (isTag) return type();
+                setTimeout(type, 130);
+            }());
+}
 

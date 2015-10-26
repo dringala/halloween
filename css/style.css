@@ -77,7 +77,10 @@ h1 {
   background: red;
   z-index: 999;
 }
-.test {
+.end-video {
+  z-index: -10;
+}
+.test, .end-video {
   width: 100%    !important;
   height: auto   !important;
   position: fixed;
@@ -129,7 +132,7 @@ h1 {
   -webkit-animation: scroll-bounce 1.5s linear 1.5s infinite alternate;
     animation: scroll-bounce 1.5s linear 1.5s infinite alternate;
 }
-#section-one-continue {
+#section-one-right-continue, #section-one-left-continue, #section-two-left-continue, #section-two-right-continue {
   width: 402px;
   height: 109px;
   margin: auto;
@@ -138,9 +141,33 @@ h1 {
   z-index: 9999;
   background: url("../images/continue.png");
 }
-#section-one-continue:hover {
+#section-one-right-continue:hover, #section-one-left-continue:hover, #section-two-left-continue:hover, #section-two-right-continue:hover {
   background-position: -402px 0;
 }
+.thisdiv {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: black;
+  color: #fff;
+  font-size: 25px;
+  z-index: 99999;
+}
+#credits {
+    display:block;
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:100%;
+    text-align: center;
+    font-family: "Courier New", Courier, monospace;
+}
+
+
+
 #intro-continue {
   width: 402px;
   height: 109px;
@@ -228,7 +255,7 @@ h1 {
   perspective: 1000px;
 }
 
-.writer  {
+#writer  {
   font-family: "Courier New", Courier, monospace;
   color: green;
   height: 100%;
@@ -258,9 +285,9 @@ transform-origin: 38% 88%;
 -ms-transform-style: preserve-3d;
 transform-style: preserve-3d;
 -webkit-transform: perspective(700px) rotateX(-2deg) rotateY(6deg) rotateZ(0deg) scale(1) skew(1deg, -5deg) translate(0px, 0px);
--moz-transform: perspective(700px) rotateX(0deg) rotateY(15deg) rotateZ(0deg) scale(1) skew(5deg, 0deg) translate(0px, 0px);
--o-transform: perspective(700px) rotateX(0deg) rotateY(15deg) rotateZ(0deg) scale(1) skew(5deg, 0deg) translate(0px, 0px);
--ms-transform: perspective(700px) rotateX(0deg) rotateY(15deg) rotateZ(0deg) scale(1) skew(5deg, 0deg) translate(0px, 0px);
+-moz-transform:perspective(700px) rotateX(-2deg) rotateY(6deg) rotateZ(0deg) scale(1) skew(1deg, -5deg) translate(0px, 0px);
+-o-transform:perspective(700px) rotateX(-2deg) rotateY(6deg) rotateZ(0deg) scale(1) skew(1deg, -5deg) translate(0px, 0px);
+-ms-transform:perspective(700px) rotateX(-2deg) rotateY(6deg) rotateZ(0deg) scale(1) skew(1deg, -5deg) translate(0px, 0px);
 }
 
 

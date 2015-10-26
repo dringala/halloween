@@ -186,14 +186,70 @@
                   data-710p="background-image:!url(images/3-72.jpg);"
                   data-720p="background-image:!url(images/3-73.jpg);"
                   data-730p="background-image:!url(images/3-74.jpg);"
-                  data-740p="background-image:!url(images/3-75.jpg);">
+                  data-740p="background-image:!url(images/3-75.jpg);"
+                  data-750p="background-image: none;">
             </div>
+            <video class="end-video" id="computer"  >
+                  <source src="video/end-video-long-test.mp4" type="video/mp4">
+<!--                   <source src="video/End test_1.ogv" type="video/ogg"> -->
+                  Your browser does not support HTML5 video.
+            </video>            
             <div id="text-container">
-                  <div class="writer"><p>The Merchant will find you, <span class="firstname"><?php if (isset($_SESSION['firstname']) && !is_null($_SESSION['firstname'])):
-                      echo $_SESSION['firstname'];
-                  endif; ?></span>.
-                  Come out, come out wherever you are...</p></div>
+                  <div id="writer"></div>
             </div>
+            <div class="thisdiv">
+                  <div id="credits">
+                        <p>
+                              <strong>Merchants Scarehouse.<br>
+                              Another Digi Team production.</strong>
+                              <br><br><br>
+                              <strong>Concept</strong><br>
+                              The Digi Team
+                              <br><br><br>
+                              <strong>‘The Merchant’</strong><br>
+                              Terry Ponsillo
+                              <br><br><br>
+                              <strong>Art Direction</strong><br>
+                              Chris Brogan
+                              <br><br><br>
+                              <strong>Design</strong><br>
+                              Phil Earnshaw
+                              <br><br><br>
+                              <strong>Development</strong><br>
+                              Alex Dring<br>
+                              Terry Ponsillo
+                              <br><br><br>
+                              <strong>Camera, Sound &amp; Editing</strong><br>
+                              Phil Earnshaw
+                              <br><br><br>
+                              <strong>Lighting Technician </strong><br>
+                              Chris Brogan 
+                              Alex Dring
+                              <br><br><br>
+                              <strong>Guest Lighting Technician &amp; keeper of secrets</strong><br>
+                              Dave Ferguson
+                              <br><br><br>
+                              <strong>Special Effects</strong><br>
+                              The Digi Team and Dave 
+                              <br><br><br>
+                              <strong>Scream 1</strong><br>
+                              Alex Dring
+                              <br><br><br>
+                              <strong>Scream 2</strong><br>
+                              Alex Dring
+                              <br><br><br>
+                              <strong>Scream 3</strong><br>
+                              ? (It wasn’t Alex)
+                        </p>
+                  </div>
+            </div>
+            <script>
+            var username = "<?php if (isset($_SESSION['firstname']) && !is_null($_SESSION['firstname'])): echo $_SESSION['firstname']; endif; ?>",
+                  str = "<p>Remember this " + username + "<br> Should we meet<br>Be it trick, or be it treat<br>All Hallows’ eve, I won't be far<br>Come out, come out<br>Wherever you are!<br><br>Merchant of the Warehouse.</p>",
+                  i = 0,
+                  isTag,
+                  text;
+            </script>
             <script src="js/main.js"></script>
       </body>
 </html>
