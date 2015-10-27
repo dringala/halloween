@@ -186,8 +186,7 @@
                   data-710p="background-image:!url(images/3-72.jpg);"
                   data-720p="background-image:!url(images/3-73.jpg);"
                   data-730p="background-image:!url(images/3-74.jpg);"
-                  data-740p="background-image:!url(images/3-75.jpg);"
-                  data-750p="background-image: none;">
+                  data-740p="background-image:!url(images/3-75.jpg);">
             </div>
             <video class="end-video" id="computer"  >
                   <source src="video/end-video-long-test.mp4" type="video/mp4">

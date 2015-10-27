@@ -65,16 +65,17 @@ $(document).ready(function() {
                   $('#computer')[0].load();
             }
         });
-
-    }
-
     var clearIn = setInterval(function(){
         var current = $('#computer').get(0).currentTime;
             if(current > 6) {
                 typingText();
                 clearInterval(clearIn);
             } 
-    },1000); 
+    },1000);         
+
+    }
+
+
 
     $("#section-one-right-continue").hide();
     $("#section-one-right-continue").delay(22000).fadeIn("slow");
