@@ -222,7 +222,7 @@
                               Phil Earnshaw
                               <br><br><br>
                               <strong>Lighting Technician </strong><br>
-                              Chris Brogan 
+                              Chris Brogan <br>
                               Alex Dring
                               <br><br><br>
                               <strong>Guest Lighting Technician &amp; keeper of secrets</strong><br>
@@ -241,6 +241,7 @@
                               ? (It wasn’t Alex)
                         </p>
                   </div>
+                  <a class="animsition-link" id="end-replay" href="indexv2.html"></a>
             </div>
             <script>
             var username = "<?php if (isset($_SESSION['firstname']) && !is_null($_SESSION['firstname'])): echo $_SESSION['firstname']; endif; ?>",

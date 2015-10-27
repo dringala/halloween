@@ -9,7 +9,9 @@ var maxHeight = $(window).height();
 // var creditHeight = ($('#credits').height());
 function fun(){
 $('#credits').css('top', '');
-$('#credits').animate({top:"-200%"}, 25000);
+$('#credits').animate({top:"-200%"}, 23000, function() {
+     $('#end-replay').fadeIn();
+});
     
 }
 
@@ -29,6 +31,7 @@ $(document).ready(function() {
     });
     $('.animsition').animsition();
     $('.test').hide();
+    $('#end-replay').hide();
     // $('.end-video').hide();    
 
     if($('.test').length > 0) {
@@ -117,21 +120,21 @@ $(window).resize(function() {
 function typingText() {
      $('#writer').fadeIn();
 
-                (function type() {
-                text = str.slice(0, ++i);
-                if (text === str) {
-              $('#writer').delay(4000).fadeOut();
-                return 
-                };
-                
-                document.getElementById('writer').innerHTML = text;
+    (function type() {
+        text = str.slice(0, ++i);
+        if (text === str) {
+          $('#writer').delay(4000).fadeOut();
+            return 
+            };
+        
+        document.getElementById('writer').innerHTML = text;
 
-                var char = text.slice(-1);
-                if( char === '<' ) isTag = true;
-                if( char === '>' ) isTag = false;
+        var char = text.slice(-1);
+        if( char === '<' ) isTag = true;
+        if( char === '>' ) isTag = false;
 
-                if (isTag) return type();
-                setTimeout(type, 130);
-            }());
+        if (isTag) return type();
+        setTimeout(type, 130);
+    }());
 }
 
