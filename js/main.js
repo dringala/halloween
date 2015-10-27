@@ -7,18 +7,17 @@ var maxWidth = $(window).width();
 var maxHeight = $(window).height();
 
 // var creditHeight = ($('#credits').height());
-function fun(){
-$('#credits').css('top', '');
-$('#credits').animate({top:"-200%"}, 23000, function() {
-     $('#end-replay').fadeIn();
-});
-    
+function creditsText() {
+    $('#credits').css('top', '');
+    $('#credits').animate({top:"-200%"}, 23000, function() {
+         $('#end-replay').fadeIn();
+    });
 }
 
 function callCredits() {
     $('.thisdiv').fadeIn("slow", function() {
         $('#credits').fadeIn("slow");
-        fun();
+        creditsText();
     });    
 }
 
@@ -68,35 +67,25 @@ $(document).ready(function() {
                   $('#computer')[0].load();
             }
         });
-    var clearIn = setInterval(function(){
-        var current = $('#computer').get(0).currentTime;
-            if(current > 6) {
-                typingText();
-                clearInterval(clearIn);
-            } 
-    },1000);         
-
+        var clearIn = setInterval(function() {
+            var current = $('#computer').get(0).currentTime;
+                if(current > 6) {
+                    typingText();
+                    clearInterval(clearIn);
+                } 
+        },1000);         
     }
-
-
-
     $("#section-one-right-continue").hide();
     $("#section-one-right-continue").delay(22000).fadeIn("slow");
     $("#section-one-left-continue").hide();
     $("#section-one-left-continue").delay(18000).fadeIn("slow");  
     $("#section-two-right-continue").hide();
     $("#section-two-right-continue").delay(26000).fadeIn("slow");        
-    
     $("#intro-continue, .thisdiv").hide();
-
     $("#intro-video").bind("ended", function() {
         $("#intro-continue").fadeIn("slow");
     });
-
-
 });
-
-
 
 function disableScroll() {
     $('body').on('scroll touchmove mousewheel', function(e){
@@ -115,10 +104,8 @@ $(window).resize(function() {
     });
 });
 
-
-
 function typingText() {
-     $('#writer').fadeIn();
+    $('#writer').fadeIn();
 
     (function type() {
         text = str.slice(0, ++i);
