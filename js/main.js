@@ -17,6 +17,7 @@ function creditsText() {
 function callCredits() {
     $('.thisdiv').fadeIn("slow", function() {
         $('#credits').fadeIn("slow");
+        $('audio').prop('muted', true);
         creditsText();
     });    
 }
@@ -24,7 +25,7 @@ function callCredits() {
 $(document).ready(function() {
 
     $('.thisdiv').hide();
-    $('.demo, .test, #section-one-left, #intro-video, #section-two-right, .thisdiv').css({
+    $('.demo, .test, #section-one-left, #intro-video, #section-two-left,  #section-two-right, .thisdiv, #instructions').css({
         width: maxWidth,
         height: maxHeight
     });
@@ -48,6 +49,17 @@ $(document).ready(function() {
             }
         });
     }
+    if($('#instructions').length > 0) {   
+        $('.instruction-close').on('click', function() {
+            $('#instructions').fadeOut(function() {
+                $('#intro-video')[0].play();
+            });
+        });
+        $("#intro-video").bind("ended", function() {
+            $("#intro-continue").fadeIn("slow");
+        });        
+    }
+
 
     $('#writer').hide();
     if($('#writer').length > 0) {
@@ -80,11 +92,11 @@ $(document).ready(function() {
     $("#section-one-left-continue").hide();
     $("#section-one-left-continue").delay(18000).fadeIn("slow");  
     $("#section-two-right-continue").hide();
-    $("#section-two-right-continue").delay(26000).fadeIn("slow");        
+    $("#section-two-right-continue").delay(26000).fadeIn("slow");       
+    $("#section-two-left-continue").hide();
+    $("#section-two-left-continue").delay(28000).fadeIn("slow");            
     $("#intro-continue, .thisdiv").hide();
-    $("#intro-video").bind("ended", function() {
-        $("#intro-continue").fadeIn("slow");
-    });
+
 });
 
 function disableScroll() {

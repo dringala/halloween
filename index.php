@@ -75,8 +75,19 @@
             <link rel="stylesheet" type="text/css" href="css/style.css">
       </head>
       <body class="animsition">
+            <div id="instructions">
+                <div class="instruction-text">
+                    <p>
+                        To get the full experience, put your headphones on and turn up the volume… if you dare.
+                    </p>
+                        <div class="instruction-close"></div>
+                    <p>
+                        * A fast broadband connection is recommended
+                    </p>
+                </div>
+            </div>
             <a class="animsition-link" id="intro-continue" href="indexv2.html"></a>
-            <video id="intro-video" autoplay>
+            <video id="intro-video">
                   <source src="video/intro-video.mp4" type="video/mp4">
                   <source src="video/End test_1.ogv" type="video/ogg">                  
                   Your browser does not support HTML5 video.

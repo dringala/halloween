@@ -50,7 +50,9 @@ table {
 box-sizing:border-box;
 -webkit-backface-visibility:hidden;
 }
-
+audio {
+  visibility: hidden;
+}
 
 
 body {
@@ -119,7 +121,43 @@ h1 {
 .buttons:hover {
   color:#f00;
 }
+#instructions {
+  width: 100%;
+  color: #ffffff;
+  height: 100%;
+  background: #000000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999999;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;  
+}
+#instructions p {
+  margin: 40px 0;
+}
+#instructions p:first-child {
+  font-size: 20px;
+}
 
+.instruction-text {
+  width: 400px;
+  height: 300px;
+  margin: auto;
+  position: absolute;
+  left: 0; bottom: 0; right: 0; top: 0;
+}
+.instruction-close {
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  width: 195px;
+  height: 97px;
+  background: url("../images/start.png");
+}
+.instruction-close:hover {
+   background-position: -195px 0; 
+}
 .scroll {
   width: 130px;
   height: 116px;
@@ -166,15 +204,17 @@ h1 {
     font-family: "Courier New", Courier, monospace;
 }
 #end-replay {
-  width: 230px;
-  height: 110px;
+  width: 224px;
+  height: 111px;
   margin: auto;
   position: fixed;
   left: 0; bottom: 0; right: 0; top: 0;
   z-index: 9999;
-  background: url("../images/enter.png");
+  background: url("../images/replay.png");
 }
-
+#end-replay:hover {
+  background-position: -224px 0;
+}
 
 #intro-continue {
   width: 230px;

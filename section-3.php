@@ -97,7 +97,7 @@
             </script>
       </head>
       <body>
-            <audio controls loop mute >
+            <audio controls loop autoplay>
                   <source src="sound/soundscape-1.mp3" type="audio/mpeg">
                   Your browser does not support the audio element.
             </audio>
