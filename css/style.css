@@ -107,10 +107,15 @@ h1 {
 }
 .no-support {
   background: #000000;
+  color: #ffffff;
+  display: table;
+  width: 100%;
+  padding: 4em 2em 2em 2em;
   font-size: 20px;
   text-align: center;
   font-family: "Courier New", Courier, monospace;  
 }
+
 .buttons {
   width: 300px;
   height: 100px;
