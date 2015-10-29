@@ -54,7 +54,11 @@ box-sizing:border-box;
 audio {
   visibility: hidden;
 }
-
+video {
+    width:100%;
+    height:auto;
+    background: #000000;    
+}
 
 body {
   background: #000000;
