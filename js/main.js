@@ -21,6 +21,13 @@ function callCredits() {
         creditsText();
     });    
 }
+function disableScroll() {
+    $('body').on('scroll touchmove mousewheel', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+    });
+}
 
 $(document).ready(function() {
 
@@ -64,9 +71,9 @@ $(document).ready(function() {
     $('#writer').hide();
     if($('#writer').length > 0) {
         $(window).scroll(function() {
-            if (document.documentElement.clientHeight + $(document).scrollTop() >= document.body.offsetHeight) {
+            if  ($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
                 disableScroll();
-                $('#computer')[0].play();
+                $('#computer')[0].play();              
                 $('.end-video').css("z-index", "0");
                     // trigger first video 
                     // after 7/8 seconds start typing
@@ -99,13 +106,7 @@ $(document).ready(function() {
 
 });
 
-function disableScroll() {
-    $('body').on('scroll touchmove mousewheel', function(e){
-      e.preventDefault();
-      e.stopPropagation();
-      return false;
-    });
-}
+
 
 $(window).resize(function() {
     var maxWidth = $(window).width();

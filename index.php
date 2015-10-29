@@ -11,7 +11,8 @@
      
     // Any tablet device.
     if( $detect->isTablet() ){
-     
+        header("Location: /no-support.html"); /* Redirect browser */
+        exit();
     }
     if ($_SERVER['SERVER_NAME'] === 'hosted.uk.dev') {
         // Local
@@ -98,10 +99,19 @@
             <a class="animsition-link" id="intro-continue" href="indexv2.html"></a>
             <video id="intro-video">
                   <source src="video/intro-video.mp4" type="video/mp4">
-                  <source src="video/End test_1.ogv" type="video/ogg">                  
+                  <source src="video/intro-video.ogv" type="video/ogg">                  
                   Your browser does not support HTML5 video.
             </video>
-            
+            <script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-69445751-1', 'auto');
+              ga('send', 'pageview');
+
+            </script>            
             <script src="js/main.js"></script>
       </body>
 </html>

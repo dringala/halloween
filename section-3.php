@@ -96,7 +96,7 @@
             )
             </script>
       </head>
-      <body>
+      <body class="animsition">
             <audio controls loop autoplay>
                   <source src="sound/soundscape-1.mp3" type="audio/mpeg">
                   Your browser does not support the audio element.
@@ -190,7 +190,7 @@
             </div>
             <video class="end-video" id="computer"  >
                   <source src="video/end-video-long-test.mp4" type="video/mp4">
-<!--                   <source src="video/End test_1.ogv" type="video/ogg"> -->
+                  <source src="video/end-video-long-test.ogv" type="video/ogg">
                   Your browser does not support HTML5 video.
             </video>            
             <div id="text-container">
@@ -250,6 +250,16 @@
                   isTag,
                   text;
             </script>
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-69445751-1', 'auto');
+        ga('send', 'pageview');
+
+      </script>            
             <script src="js/main.js"></script>
       </body>
 </html>
