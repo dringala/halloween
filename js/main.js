@@ -22,7 +22,7 @@ function callCredits() {
     });    
 }
 function disableScroll() {
-    $('body').on('scroll touchmove mousewheel', function(e) {
+    $(document).on('scroll touchmove mousewheel DOMMouseScroll', function(e) {
         e.preventDefault();
         e.stopPropagation();
         return false;
