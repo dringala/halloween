@@ -15,27 +15,24 @@
     }
     if ($_SERVER['SERVER_NAME'] === 'hosted.uk.dev') {
         // Local
-        $dbhost = 'localhost';
         $dbuser = 'root';
         $dbpass = 'password';
     } 
     elseif ($_SERVER['SERVER_NAME'] === 'halloween.dev') {
-        $dbhost = 'localhost';
         $dbuser = 'root';
         $dbpass = '';            
     } 
     elseif ($_SERVER['SERVER_NAME'] === 'localhost:8888') {
-        $dbhost = 'localhost';
         $dbuser = 'root';
         $dbpass = 'root';            
     } else {
         // Live
         error_reporting(0); // Turn off errors so we can log them
-        $dbhost = 'localhost';
-        $dbuser = 'halloween2015';
-        $dbpass = 'xxxxxxxxx';
+        $dbuser = 'wrghallowen';
+        $dbpass = 'sT8z97sf';
     }
     
+    $dbhost  = 'localhost';
     $dbname  = 'halloween2015';
     $dbtable = 'recipients';    
     $logfile = 'myerror.log';
