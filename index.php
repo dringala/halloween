@@ -1,6 +1,18 @@
 <?php
     session_start();
-    
+    require_once 'Mobile_Detect.php';
+    $detect = new Mobile_Detect;
+     
+    // Any mobile device (phones or tablets).
+    if ( $detect->isMobile() ) {
+        header("Location: /no-support.html"); /* Redirect browser */
+        exit();
+    }
+     
+    // Any tablet device.
+    if( $detect->isTablet() ){
+     
+    }
     if ($_SERVER['SERVER_NAME'] === 'hosted.uk.dev') {
         // Local
         $dbhost = 'localhost';
