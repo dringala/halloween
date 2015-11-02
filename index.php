@@ -77,7 +77,12 @@
 <html lang="en">
       <head>
             <meta charset="UTF-8">
-            <title>Document</title>
+            <meta property="og:url"                content="http://www.hosted.uk.com/Halloween" />
+            <meta property="og:type"               content="video.movie" />
+            <meta property="og:title"              content="Come out, come out wherever you are" />
+            <meta property="og:description"        content="WRG Digital team create a Halloween haunting" />
+            <meta property="og:image"              content="http://www.hosted.uk.com/Halloween/images/wrg-merchant-scarehouse.jpg" />            
+            <title>Halloween</title>
             <script src="https://cdn.jsdelivr.net/jquery/3.0.0-alpha1/jquery.js"></script>
             <script src="https://cdn.jsdelivr.net/skrollr/0.6.30/skrollr.min.js"></script>
             <link rel="stylesheet" type="text/css" href="css/animsition.min.css">
@@ -97,7 +102,7 @@
                 </div>
             </div>
             <a class="animsition-link" id="intro-continue" href="indexv2.html"></a>
-            <video id="intro-video">
+            <video id="intro-video" >
                   <source src="video/intro-video.mp4" type="video/mp4">
                   <source src="video/intro-video.ogv" type="video/ogg">                  
                   Your browser does not support HTML5 video.

@@ -54,11 +54,7 @@ box-sizing:border-box;
 audio {
   visibility: hidden;
 }
-video {
-    width:100%;
-    height:auto;
-    background: #000000;    
-}
+
 
 body {
   background: #000000;
@@ -87,10 +83,11 @@ h1 {
 .end-video {
   z-index: -10;
 }
-.test, .end-video {
+video {
   width: 100%    !important;
-  height: auto   !important;
+  height: 100%   !important;
   position: fixed;
+  background: #000000;    
   top: 0;
   left: 0;
 }
@@ -370,4 +367,21 @@ transform-style: preserve-3d;
 }
 
 
+@media only screen and (max-width: 1280px) {
+  #text-container {
+    position: fixed;
+    height: 46%;
+    width: 42.5%;
+    z-index: 9999;
+    box-sizing: border-box;
+    top: 25%;
+    left: 23.5%;
+    perspective: 1000px;
+  }
 
+  #writer  {
+    font-family: "Courier New", Courier, monospace;
+    color: green;
+    font-size: 18px;
+  }
+}

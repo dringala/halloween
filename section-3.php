@@ -3,7 +3,7 @@
 <html lang="en">
       <head>
             <meta charset="UTF-8">
-            <title>Document</title>
+            <title>Halloween</title>
             <script src="https://cdn.jsdelivr.net/jquery/3.0.0-alpha1/jquery.js"></script>
             <script src="https://cdn.jsdelivr.net/skrollr/0.6.30/skrollr.min.js"></script>
             <link rel="stylesheet" type="text/css" href="css/animsition.min.css">
@@ -199,15 +199,21 @@
             <div class="thisdiv">
                   <div id="credits">
                         <p>
-                              <strong>Merchants Scarehouse.<br>
-                              Another Digi Team production.</strong>
+                              <strong>Merchants Scarehouse<br>
+                              Another Digi Team production</strong>
                               <br><br><br>
                               <strong>Concept</strong><br>
                               The Digi Team
                               <br><br><br>
-                              <strong>‘The Merchant’</strong><br>
+                              <strong>‘The Merchant’ #1</strong><br>
                               Terry Ponsillo
                               <br><br><br>
+                             <strong>‘The Merchant’ #2</strong><br>
+                              Chris Brogan
+                              <br><br><br>
+                             <strong>Night Watchman</strong><br>
+                              Lawrence (as himself)
+                              <br><br><br>                                                               
                               <strong>Art Direction</strong><br>
                               Chris Brogan
                               <br><br><br>
@@ -229,16 +235,8 @@
                               Dave Ferguson
                               <br><br><br>
                               <strong>Special Effects</strong><br>
-                              The Digi Team and Dave 
-                              <br><br><br>
-                              <strong>Scream 1</strong><br>
-                              Alex Dring
-                              <br><br><br>
-                              <strong>Scream 2</strong><br>
-                              Alex Dring
-                              <br><br><br>
-                              <strong>Scream 3</strong><br>
-                              ? (It wasn’t Alex)
+                              The Digi Team
+                              <br><br>
                         </p>
                   </div>
                   <a class="animsition-link" id="end-replay" href="indexv2.html"></a>

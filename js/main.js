@@ -32,7 +32,7 @@ function disableScroll() {
 $(document).ready(function() {
 
     $('.thisdiv').hide();
-    $('.demo, .test, #section-one-left, #intro-video, #section-two-left,  #section-two-right, .thisdiv, #instructions').css({
+    $('.demo, .test, #section-one-left, #section-one-right, #intro-video, #section-two-left,  #section-two-right, .thisdiv, #instructions').css({
         width: maxWidth,
         height: maxHeight
     });
@@ -94,14 +94,44 @@ $(document).ready(function() {
                 } 
         },1000);         
     }
-    $("#section-one-right-continue").hide();
-    $("#section-one-right-continue").delay(22000).fadeIn("slow");
-    $("#section-one-left-continue").hide();
-    $("#section-one-left-continue").delay(18000).fadeIn("slow");  
-    $("#section-two-right-continue").hide();
-    $("#section-two-right-continue").delay(26000).fadeIn("slow");       
-    $("#section-two-left-continue").hide();
-    $("#section-two-left-continue").delay(28000).fadeIn("slow");            
+    if($('#section-one-right').length > 0) {
+        $("#section-one-right-continue").hide();
+            var clearIn = setInterval(function() {
+            var current = $('#section-one-right').get(0).currentTime;
+                if(current > 22) {
+                    $("#section-one-right-continue").fadeIn("slow");
+                } 
+        },1000); 
+    }
+
+    if($('#section-one-left').length > 0) {
+            $("#section-one-left-continue").hide();
+            var clearIn = setInterval(function() {
+            var current = $('#section-one-left').get(0).currentTime;
+                if(current > 18) {
+                    $("#section-one-left-continue").fadeIn("slow");
+                } 
+        },1000); 
+    }
+    if($('#section-two-left').length > 0) {
+            $("#section-two-left-continue").hide();
+            var clearIn = setInterval(function() {
+            var current = $('#section-two-left').get(0).currentTime;
+                if(current > 28) {
+                    $("#section-two-left-continue").fadeIn("slow");
+                } 
+        },1000); 
+    }    
+    if($('#section-two-right').length > 0) {
+            $("#section-two-right-continue").hide();
+            var clearIn = setInterval(function() {
+            var current = $('#section-two-right').get(0).currentTime;
+                if(current > 26) {
+                    $("#section-two-right-continue").fadeIn("slow");
+                } 
+        },1000); 
+    }       
+         
     $("#intro-continue, .thisdiv").hide();
 
 });
